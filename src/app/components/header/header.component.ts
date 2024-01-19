@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  public isLightTheme = true;
 
+  onThemeSwitchChange() {
+    this.isLightTheme = !this.isLightTheme;
+
+    document.body.setAttribute(
+      'data-bs-theme',
+      this.isLightTheme ? 'light' : 'dark'
+    );
+  }
 }
