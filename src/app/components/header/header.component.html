@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" [ngClass]="{'bg-dark': isLightTheme, 'bg-light': !isLightTheme}">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Ai angular 17</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,15 +10,14 @@
           <a class="nav-link" href="/imagenes">Generadora de imágenes</a>
         </li>
       </ul>
-      <span class="navbar-text">
-        <label class="swtich">
-          <input
+      <div class="d-flex" >
+        <input
             type="checkbox"
             [checked]="isLightTheme"
             (change)="onThemeSwitchChange()"
+            id="toggle"
           />
-        </label>
-      </span>
+      </div>
     </div>
   </div>
 </nav>

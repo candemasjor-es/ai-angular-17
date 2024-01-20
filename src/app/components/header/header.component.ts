@@ -1,21 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  public isLightTheme = true;
+  public isLightTheme = false;
 
   onThemeSwitchChange() {
     this.isLightTheme = !this.isLightTheme;
 
     document.body.setAttribute(
       'data-bs-theme',
-      this.isLightTheme ? 'light' : 'dark'
+      this.isLightTheme ? 'dark' : 'light'
     );
   }
 }
