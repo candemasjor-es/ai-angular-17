@@ -4,7 +4,7 @@ import { PagesImganesComponent } from './pages/pages-imganes/pages-imganes.compo
 import { Error404Component } from './pages/error-404/error-404.component';
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'imagenes', component: PagesImganesComponent},
-  {path: '**', component: Error404Component}
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'imagenes', component: PagesImganesComponent },
+  { path: '**', component: Error404Component },
 ];

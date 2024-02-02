@@ -6,11 +6,11 @@ import { ThemasService } from './services/themas/themas.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  providers: [ ThemasService ],
+  providers: [ThemasService],
   imports: [CommonModule, RouterOutlet, HeaderComponent],
-  
+
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'ai-angular-17';
@@ -19,5 +19,4 @@ export class AppComponent {
   onThemeSwitchChange() {
     this.themasservice.setDarkTheme();
   }
-
 }

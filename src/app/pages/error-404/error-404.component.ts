@@ -5,10 +5,8 @@ import { ThemasService } from '../../services/themas/themas.service';
   selector: 'app-error-404',
   standalone: true,
   imports: [],
-  providers: [ ThemasService ],
+  providers: [ThemasService],
   templateUrl: './error-404.component.html',
-  styleUrl: './error-404.component.css'
+  styleUrl: './error-404.component.css',
 })
-export class Error404Component {
-
-}
+export class Error404Component {}
